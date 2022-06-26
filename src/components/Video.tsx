@@ -19,7 +19,7 @@ const GET_LESSON_BY_SLUG_QUERY = gql`
   }
 `
 
-interface GetLEssonBySlugResponse {
+interface GetLessonBySlugResponse {
   lesson: {
     title: string;
     videoId: string;
@@ -39,7 +39,7 @@ interface VideoProps {
 export function Video ({
   lessonSlug
 }: VideoProps) {
-  const { data } = useQuery<GetLEssonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
+  const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
     variables: {
       slug: lessonSlug
     }
